@@ -1,16 +1,13 @@
 <div class="background">
+    <navbar (paginaEvento)="paginaNavbar($event)"></navbar>
+    <ng-template *ngIf = "pagina == 'biglietto'; then bloccoBiglietto"></ng-template>
+    <ng-template #bloccoBiglietto>
+        <list></list>
+    
+    </ng-template>
 
-
-<navbar (paginaEvento)="paginaNavbar($event)"></navbar>
-<ng-template *ngIf = "pagina == 'biglietto'; then bloccoBiglietto"></ng-template>
-<ng-template #bloccoBiglietto>
-    <list></list>
-  
-</ng-template>
-
-<ng-template *ngIf = "pagina == 'home'; then bloccoHome"></ng-template>
-<ng-template #bloccoHome>
-    <introduction></introduction>
-
-</ng-template>
+    <ng-template *ngIf = "pagina == 'home'; then bloccoHome"></ng-template>
+    <ng-template #bloccoHome>
+        <introduction></introduction>
+    </ng-template>
 </div>
