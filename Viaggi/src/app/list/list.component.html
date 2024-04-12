@@ -7,12 +7,13 @@
       </div>
       <div class="col-md-8" style="background-color: rgba(255, 255, 255, 0.678); border-radius: 50px; " >
         <div class="card-body" style="display: flex; flex-direction: column; align-items: center; margin-top: 20px; color: black; font-family: Nasa;">
-          <h1 class="card-title">{{element.destinazione}}</h1>
+          <h1 class="card-title">{{element.destinazione | uppercase }}</h1>
           <p class="card-title text-muted" > {{element.sistema}} </p>
           <p class="card-title"><span style="font-weight: bold;" >Data Partenza:</span> {{element.dataPartenza | date:'medium'}} </p>
           <p class="card-title"><span style="font-weight: bold;">Data Arrivo (Previsto):</span> {{element.dataArrivo | date:'medium'}}</p>
           <p class="card-text " ><span style="font-weight: bold;">Partenza:</span> {{element.partenza}} ({{element.spazioPorti}})</p>
           <p class="card-text " ><small><span style="font-weight: bold;">Durata:</span> {{element.durata}}</small></p>
+          <p class="card-text " ><small><span style="font-weight: bold;">Distanza:</span> {{element.distanza}}</small></p>
         
           <p class="card-text"><span style="font-weight: bold; color: black;">Costo:</span> {{element.costo | currency: 'EUR':'symbol':'3.1-3'}}</p>
         </div>
